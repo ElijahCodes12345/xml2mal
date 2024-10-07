@@ -7,6 +7,7 @@ This project is a cool web application that allows users to upload their XML ani
 - Upload XML file containing an anime list.
 - Input for MyAnimeList username.
 - Conversion of the XML file to MyAnimeList format.
+- View the converted XML file.
 - Download the converted XML file.
 
 ## Technologies Used
