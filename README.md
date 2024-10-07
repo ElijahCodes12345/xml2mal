@@ -19,7 +19,7 @@ This project is a cool web application that allows users to upload their XML ani
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ElijahKingdom/xml2mal.git
+   git clone https://github.com/ElijahCodes12345/xml2mal.git
    cd xml2mal
    ```
 2. Install dependencies:
