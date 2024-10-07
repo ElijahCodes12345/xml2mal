@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // Middleware for handling file uploads
 app.use(fileUpload());
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Define routes
 app.use('/', xmlRoutes);
