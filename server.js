@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const xmlRoutes = require('./routes/xmlRoutes');
@@ -7,6 +8,7 @@ const errorHandler = require('./middleware/errorHandler');
 const app = express();
 
 // Using EJS for rendering
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));

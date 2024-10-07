@@ -11,6 +11,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "build": "webpack --mode production",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
