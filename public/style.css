@@ -113,7 +113,7 @@ label {
 
 .form-container form button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 21px;
     font-weight: 700;
     background-color: #001f3f;
     color: #E6E6FA;
@@ -196,7 +196,7 @@ label {
 
 #output-xml code .xml-btn-container button, #output-xml code .xml-btn-container form {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
     color: #E6E6FA;
     background-color: inherit;
@@ -280,4 +280,18 @@ footer small {
 
 .profiles ul li a:hover {
     color: #E6E6FA;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #00BFFF;
+    color: #E6E6FA;
+    padding: 10px 20px;
+    border: 3px solid #001f3f;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 99999;
 }

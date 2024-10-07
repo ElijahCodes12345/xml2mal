@@ -32,6 +32,9 @@ This project is a cool web application that allows users to upload their XML ani
    ```
 4. Open the application in a web browser at `http://localhost:3000`.
 
+## Future Development
+- Add support for more anime list formats (.json, .txt, etc.)
+
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements, features or bug fixes, feel free to create an issue or submit a pull request.
 

@@ -17,6 +17,7 @@ function copy(elem) {
     if (navigator.clipboard) {
         navigator.clipboard.writeText(elem.innerText)
             .then(() => {
+                customAlert("Copied to clipboard!");
                 console.log("Text copied to clipboard!");
             })
             .catch(err => {
@@ -104,6 +105,19 @@ function dragElement(element, handle) {
         document.onmouseup = null;
         document.onmousemove = null;
     }
+}
+
+function customAlert(message) {
+    const alertBox = document.createElement('div');
+    const Pmessage = document.createElement('p');
+    Pmessage.innerText = message;
+    alertBox.appendChild(Pmessage);
+    alertBox.classList.add('alert');
+    document.body.appendChild(alertBox);
+
+    setTimeout(() => {
+        alertBox.remove();
+    }, 3000);
 }
 
 // currently flawed functions and evemts

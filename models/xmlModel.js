@@ -28,11 +28,12 @@ exports.convertXML = (inputXML, callback) => {
 // Helper function to map the folder names to MAL status codes
 function mapStatusToMAL(status) {
     switch (status) {
-        case 'Completed': return 2;
-        case 'Watching': return 1;
-        case 'On-Hold': return 3;
-        case 'Plan to watch': return 6;
-        default: return 6;  // Default to "Plan to Watch"
+        case 'Completed': return 'Completed'; // 2
+        case 'Watching': return 'Watching'; // 1
+        case 'On-Hold': return 'On-Hold'; // 3
+        case 'Dropped': return 'Dropped'; // 4
+        case 'Plan to watch': return 'Plan to Watch'; // 6
+        default: return 'Plan to watch';  // Default to "Plan to Watch"
     }
 }
 

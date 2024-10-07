@@ -15,7 +15,7 @@
                 <div class="form-group-container">
                     <div class="form-group">
                         <label for="file">Upload Your XML File:</label>
-                        <input type="file" name="file" id="file" required>
+                        <input type="file" name="file" id="file" accept=".xml" required>
                     </div>
 
                     <div class="form-group">
@@ -26,7 +26,7 @@
                 <button type="submit" id="convert-btn">Convert</button>
             </form>
             <% if (outputXML) { %>
-                <details id="output-xml">
+                <details id="output-xml" open>
                     <summary>Output XML:</summary>
                     <code>
                         <pre><%= outputXML ? outputXML : '' %></pre>
@@ -54,7 +54,7 @@
             <div class="profiles">
                 <ul>
                     <li>
-                        <a href="https://github.com/elijahCodes12345/" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                        <a href="https://github.com/ElijahCodes12345/xml2mal/" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                     </li>
                     <li>
                         <a href="https://x.com/ElijahAdebanwo" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
