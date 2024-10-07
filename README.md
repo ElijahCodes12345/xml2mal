@@ -45,10 +45,10 @@ Here is an example of the XML format to be imported:
                 <!-- Item details go here -->
             </item>
         </data>
+        ...
     </folder>
 </list> 
 ```
-Make sure to replace the comment inside `<item>` with any relevant details you wish to include. This way, your XML structure is properly formatted and easily readable in your `readme.md` file.
 
 ## Future Development
 - Add support for more anime list formats (.json, .txt, etc.)
