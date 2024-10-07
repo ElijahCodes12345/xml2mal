@@ -19,8 +19,8 @@ This project is a cool web application that allows users to upload their XML ani
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/ElijahKingdom/xml2mal.git
+   cd xml2mal
    ```
 2. Install dependencies:
    ```bash
@@ -31,6 +31,24 @@ This project is a cool web application that allows users to upload their XML ani
    npm start
    ```
 4. Open the application in a web browser at `http://localhost:3000`.
+
+## XML Structure
+
+Here is an example of the XML format to be imported:
+
+```xml
+<list>
+    <folder>
+        <name>Completed</name>
+        <data>
+            <item>
+                <!-- Item details go here -->
+            </item>
+        </data>
+    </folder>
+</list> 
+```
+Make sure to replace the comment inside `<item>` with any relevant details you wish to include. This way, your XML structure is properly formatted and easily readable in your `readme.md` file.
 
 ## Future Development
 - Add support for more anime list formats (.json, .txt, etc.)
