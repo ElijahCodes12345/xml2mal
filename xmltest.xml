@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<myanimelist>
+    <myinfo>
+        <user_name>Superfreezer</user_name>
+        <user_export_type>1</user_export_type>
+        <user_total_anime>0</user_total_anime>
+        <user_total_watching>0</user_total_watching>
+        <user_total_completed>0</user_total_completed>
+        <user_total_onhold>0</user_total_onhold>
+        <user_total_dropped>0</user_total_dropped>
+        <user_total_plantowatch>0</user_total_plantowatch>
+    </myinfo>
+
+    <anime>
+        <series_animedb_id>34566</series_animedb_id>
+        <series_title>Boruto: Naruto Next Generations</series_title>
+        <my_watched_episodes>0</my_watched_episodes>
+        <my_status>2</my_status>
+        <my_score>0</my_score>
+        <my_last_updated>1696503047</my_last_updated>
+        <update_on_import>1</update_on_import>
+    </anime>
+</myanimelist>
