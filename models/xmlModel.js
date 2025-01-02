@@ -25,7 +25,7 @@ exports.convertXML = (inputXML, callback) => {
     });
 };
 
-// Helper function to map the folder names to MAL status codes
+// function to map the folder names to MAL status codes
 function mapStatusToMAL(status) {
     switch (status) {
         case 'Completed': return 'Completed'; // 2
