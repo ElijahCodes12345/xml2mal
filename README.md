@@ -10,10 +10,10 @@ Visit the application at: [https://xml2mal.vercel.app/](https://xml2mal.vercel.a
 ## How to Use
 
 ### Step 1: Export Your Anime List
-1. Go to your current anime tracking platform (e.g., hi-anime.to)
+1. Go to your current anime tracking platform (e.g., hianime.to)
 2. Navigate to your profile or list settings
 3. Look for an export option
-4. Export your list in XML format with folders
+4. Export your list in XML format grouped by folder
 
 ### Step 2: Convert Your List
 1. Visit [XML2MAL](https://xml2mal.vercel.app/)
