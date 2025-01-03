@@ -1,42 +1,42 @@
+```markdown
 # XML2MAL
 
 ## Overview
-This project is a cool web application that allows users to upload their XML anime list and convert it to a format compatible with MyAnimeList. The application processes the uploaded XML file and generates the required XML output for importing back into MyAnimeList.
+XML2MAL is a web-based tool that helps users convert their anime lists from various platforms into MyAnimeList's compatible XML format. This tool streamlines the process of transferring your anime tracking data between different anime platforms.
+
+## Live Application
+Visit the application at: [https://xml2mal.vercel.app/](https://xml2mal.vercel.app/)
+
+## How to Use
+
+### Step 1: Export Your Anime List
+1. Go to your current anime tracking platform (e.g., hi-anime.to)
+2. Navigate to your profile or list settings
+3. Look for an export option
+4. Export your list in XML format with folders
+
+### Step 2: Convert Your List
+1. Visit [XML2MAL](https://xml2mal.vercel.app/)
+2. Upload your exported XML file
+3. Enter your MyAnimeList username
+4. Click Convert to generate your MAL-compatible XML
+
+### Step 3: Import to MyAnimeList
+1. Go to [MyAnimeList Import Page](https://myanimelist.net/import.php)
+2. Import the converted XML file
+3. Follow MAL's import instructions to complete the process
 
 ## Features
-- Upload XML file containing an anime list.
-- Input for MyAnimeList username.
-- Conversion of the XML file to MyAnimeList format.
-- View the converted XML file.
-- Download the converted XML file.
+- Simple and intuitive user interface
+- Fast XML conversion
+- Support for folder-based list structure
+- Instant preview of converted XML
+- One-click download of converted file
+- Cross-platform compatibility
 
-## Technologies Used
-- Node.js
-- Express.js
-- express-fileupload (for handling file uploads)
-- EJS (Embedded JavaScript Templates)
-- xml2js (for XML parsing)
+## Technical Details
 
-## Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ElijahCodes12345/xml2mal.git
-   cd xml2mal
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the application:
-   ```bash
-   npm start
-   ```
-4. Open the application in a web browser at `http://localhost:3000`.
-
-## XML Structure
-
-Here is an example of the XML format to be imported:
-
+### Expected Input XML Structure
 ```xml
 <list>
     <folder>
@@ -46,16 +46,59 @@ Here is an example of the XML format to be imported:
                 <!-- Item details go here -->
             </item>
         </data>
-        ...
     </folder>
-</list> 
+</list>
 ```
 
-## Future Development
-- Add support for more anime list formats (.json, .txt, etc.)
+### Technologies Used
+- Node.js
+- Express.js
+- express-fileupload
+- EJS (Embedded JavaScript Templates)
+- xml2js
+
+## Development
+
+### Local Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/ElijahCodes12345/xml2mal.git
+cd xml2mal
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start development server:
+```bash
+npm start
+```
+
+4. Open `http://localhost:3000` in your browser
+
+## Roadmap
+- Support for additional anime list formats (.json, .txt)
+- Batch conversion support
+- Enhanced error handling and validation
+- Support for more anime tracking platforms
 
 ## Contributing
-Contributions are welcome! If you have suggestions for improvements, features or bug fixes, feel free to create an issue or submit a pull request.
+Found a bug? Have a feature request? Contributions are welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+## Support
+If you encounter any issues or have questions:
+1. Check existing [GitHub Issues](https://github.com/ElijahCodes12345/xml2mal/issues)
+2. Create a new issue if needed
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
