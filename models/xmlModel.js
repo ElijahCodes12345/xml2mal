@@ -16,7 +16,6 @@ exports.convertXML = (inputXML, callback) => {
                     link: item.link[0],
                     status: mapStatusToMAL(status) // Map to MAL status codes
                 };
-                console.log(anime);
                 animeList.push(anime);
             });
         });
@@ -64,7 +63,6 @@ exports.generateMALXML = (animeList, username) => {
 
     animeList.forEach(anime => {
         const animeID = extractAnimeID(anime.link);  // Extract ID from URL
-        console.log(animeID);
         const escapedTitle = escapeXML(anime.title); // Escape special characters in the title
         const animeStatus = anime.status;
         

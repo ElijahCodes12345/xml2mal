@@ -4,7 +4,7 @@ const fs = require('fs');
 const xmlModel = require('../models/xmlModel'); // Import the model for data processing
 
 // Handles file upload and XML conversion
-exports.uploadXML = async (req, res) => {
+exports.uploadXML = async (req, res, next) => {
     try {
     if (!req.files || Object.keys(req.files).length === 0) {
         return res.status(400).send('No files were uploaded.');
@@ -13,8 +13,6 @@ exports.uploadXML = async (req, res) => {
     const xmlFile = req.files.file;
     const { username } = req.body;
     const inputXML = xmlFile.data.toString();  // Convert file buffer to string
-
-    console.log(inputXML);
 
     xmlModel.convertXML(inputXML, (err, animeList) => {
         if (err) {
@@ -27,7 +25,7 @@ exports.uploadXML = async (req, res) => {
     });
     } catch (err) {
         console.error(err);
-        res.status(500).send('Error processing XML');
+        next(err);
     }
 
 };
