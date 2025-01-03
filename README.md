@@ -1,4 +1,3 @@
-```markdown
 # XML2MAL
 
 ## Overview
