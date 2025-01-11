@@ -38,14 +38,14 @@ app.use(fileUpload({
     createParentPath: true,
     limits: { 
         fileSize: 10 * 1024 * 1024,    // 10MB max file size
-        fields: 10,                     // Max number of non-file fields
-        files: 1,                       // Max number of file fields
-        parts: 11                       // Max number of parts (fields + files)
+        fields: 10,                    // Max number of non-file fields
+        files: 1,                      // Max number of file fields
+        parts: 11                      // Max number of parts (fields + files)
     },
     useTempFiles: true,
-    tempFileDir: path.join(__dirname, 'tmp'),
+    tempFileDir: '/tmp',              // Use the writable temp directory provided by Vercel
     debug: false,
-    abortOnLimit: true,                // Return 413 when limit is reached
+    abortOnLimit: true,               // Return 413 when limit is reached
     responseOnLimit: "File size limit has been reached"
 }));
 app.use(express.static(path.join(__dirname, 'public')))
