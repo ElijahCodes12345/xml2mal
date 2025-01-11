@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 const fileUpload = require('express-fileupload');
 const xmlRoutes = require('./routes/xmlRoutes');
 const errorHandler = require('./middleware/errorHandler');
@@ -22,6 +23,15 @@ app.use(bodyParser.urlencoded({
     extended: true,
     limit: '10mb'
 }));
+
+// Define the temporary directory path
+const tmpDir = path.join(__dirname, 'tmp');
+
+// Ensure the directory exists
+if (!fs.existsSync(tmpDir)) {
+    fs.mkdirSync(tmpDir, { recursive: true });
+    console.log('Temporary directory created:', tmpDir);
+}
 
 // Middleware for handling file uploads
 app.use(fileUpload({
