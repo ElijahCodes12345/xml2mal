@@ -7,16 +7,37 @@ const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 
+app.use(express.json({limit: '10mb'}));
+app.use(express.urlencoded({ 
+    extended: true,
+    limit: '10mb'
+}));
+
 // Using EJS for rendering
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '10mb'}));
+app.use(bodyParser.urlencoded({ 
+    extended: true,
+    limit: '10mb'
+}));
 
 // Middleware for handling file uploads
-app.use(fileUpload());
-
+app.use(fileUpload({
+    createParentPath: true,
+    limits: { 
+        fileSize: 10 * 1024 * 1024,    // 10MB max file size
+        fields: 10,                     // Max number of non-file fields
+        files: 1,                       // Max number of file fields
+        parts: 11                       // Max number of parts (fields + files)
+    },
+    useTempFiles: true,
+    tempFileDir: path.join(__dirname, 'tmp'),
+    debug: false,
+    abortOnLimit: true,                // Return 413 when limit is reached
+    responseOnLimit: "File size limit has been reached"
+}));
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Define routes
