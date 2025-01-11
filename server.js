@@ -24,15 +24,6 @@ app.use(bodyParser.urlencoded({
     limit: '10mb'
 }));
 
-// Define the temporary directory path
-const tmpDir = path.join(__dirname, 'tmp');
-
-// Ensure the directory exists
-if (!fs.existsSync(tmpDir)) {
-    fs.mkdirSync(tmpDir, { recursive: true });
-    console.log('Temporary directory created:', tmpDir);
-}
-
 // Middleware for handling file uploads
 app.use(fileUpload({
     createParentPath: true,
